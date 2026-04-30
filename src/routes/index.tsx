@@ -1,26 +1,35 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PageShell } from "@/components/PageShell";
+import { Hero } from "@/components/sections/Hero";
+import { WhyExist } from "@/components/sections/WhyExist";
+import { ProductsPreview } from "@/components/sections/ProductsPreview";
+import { Differentiators } from "@/components/sections/Differentiators";
+import { Faq } from "@/components/sections/Faq";
+import { FinalCta } from "@/components/sections/FinalCta";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "NEXVIA — Sistemas y sitios web para negocios en Yucatán" },
+      {
+        name: "description",
+        content:
+          "Tecnología local para negocios reales en Yucatán. Sin complicaciones, sin tecnicismos — solo resultados.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <PageShell>
+      <Hero />
+      <WhyExist />
+      <ProductsPreview />
+      <Differentiators />
+      <Faq />
+      <FinalCta />
+    </PageShell>
+  );
 }
