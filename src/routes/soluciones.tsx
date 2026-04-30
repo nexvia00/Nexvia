@@ -90,22 +90,14 @@ function Solutions() {
   const [tab, setTab] = useState<"all" | "site" | "pos">("all");
 
   const sitePlans: Plan[] = [
-    { key: "basic", ...(t("solutions.site.basic", { returnObjects: true }) as Plan) },
-    {
-      key: "comercial",
-      ...(t("solutions.site.comercial", { returnObjects: true }) as Plan),
-      popular: true,
-    },
-    { key: "pro", ...(t("solutions.site.pro", { returnObjects: true }) as Plan) },
+    { ...(t("solutions.site.basic", { returnObjects: true }) as Plan), key: "basic" },
+    { ...(t("solutions.site.comercial", { returnObjects: true }) as Plan), key: "comercial", popular: true },
+    { ...(t("solutions.site.pro", { returnObjects: true }) as Plan), key: "pro" },
   ];
   const posPlans: Plan[] = [
-    { key: "esencial", ...(t("solutions.pos.esencial", { returnObjects: true }) as Plan) },
-    {
-      key: "cocina",
-      ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan),
-      popular: true,
-    },
-    { key: "full", ...(t("solutions.pos.full", { returnObjects: true }) as Plan) },
+    { ...(t("solutions.pos.esencial", { returnObjects: true }) as Plan), key: "esencial" },
+    { ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan), key: "cocina", popular: true },
+    { ...(t("solutions.pos.full", { returnObjects: true }) as Plan), key: "full" },
   ];
 
   const inclusions = t("solutions.inclusions", { returnObjects: true }) as string[];
