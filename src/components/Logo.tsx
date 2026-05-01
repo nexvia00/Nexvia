@@ -1,10 +1,26 @@
+import { useEffect, useState } from "react";
+import logoDark from "@/assets/nexvia-letras-dark.png";
+import logoLight from "@/assets/nexvia-letras-light.png";
+
 export function Logo({ className = "" }: { className?: string }) {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const update = () => setIsDark(root.classList.contains("dark"));
+    update();
+    const observer = new MutationObserver(update);
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <span
-      className={`font-display font-bold tracking-tight text-xl select-none ${className}`}
-      style={{ fontFamily: "Sora, sans-serif" }}
-    >
-      NEXVIA<span className="text-lime">.</span>
-    </span>
+    <img
+      src={isDark ? logoLight : logoDark}
+      alt="NEXVIA"
+      className={`h-8 w-auto select-none ${className}`}
+      style={{ maxHeight: 32 }}
+      draggable={false}
+    />
   );
 }

@@ -39,28 +39,28 @@ const resources = {
         eyebrow: "Nuestros productos",
         title: "Dos soluciones, hechas para tu negocio.",
         site: {
-          name: "NEXVIA SITE",
+          name: "Nexvia Site",
           tagline: "Presencia Digital y Ventas en Línea",
           desc: "Sitios web rápidos y modernos que convierten visitas en clientes — sin tecnicismos.",
         },
         pos: {
-          name: "NEXVIA POS",
+          name: "Nexvia POS",
           tagline: "Punto de Venta para Cocinas y Tiendas",
-          desc: "Sistemas de venta hechos para la realidad del negocio yucateco. Fáciles de usar.",
+          desc: "Sistemas de venta hechos para la realidad del negocio. Fáciles de usar.",
         },
         seePlans: "Ver planes",
       },
       diff: {
         eyebrow: "Por qué Nexvia",
-        title: "Cuatro razones que nos hacen diferentes.",
+        title: "Las razones que nos hacen diferentes.",
         items: [
           {
             title: "Somos locales",
-            desc: "Tenemos oficina en Hunucmá. No eres un ticket de soporte — eres un vecino.",
+            desc: "Tenemos oficina en Hunucmá, Yucatán. No eres un ticket de soporte — eres un vecino.",
           },
           {
             title: "Precios de introducción",
-            desc: "Estamos comenzando y queremos ganar tu confianza. Los más accesibles de la región.",
+            desc: "Los más accesibles de la región. Estamos comenzando y queremos ganar tu confianza.",
           },
           {
             title: "Sin tecnicismos",
@@ -78,7 +78,7 @@ const resources = {
         items: [
           {
             q: "¿Tengo que saber de tecnología para usar sus sistemas?",
-            a: "No. Diseñamos todo pensando en personas que nunca han usado un sistema. Si tu mamá puede usar WhatsApp, puede usar Nexvia.",
+            a: "No. Diseñamos todo pensando en personas que nunca han usado un sistema. Si tu madre puede usar WhatsApp, puede usar Nexvia.",
           },
           {
             q: "¿Cuánto tiempo tarda en estar listo?",
@@ -99,8 +99,8 @@ const resources = {
         ],
       },
       finalCta: {
-        title: "¿Listo para llevar tu negocio a la mejor vía?",
-        sub: "Conversemos sin compromiso. Te escuchamos primero, después proponemos.",
+        title: "¡Vamos a conversar!",
+        sub: "Te escuchamos primero, después proponemos.",
         whatsapp: "Hablar por WhatsApp",
         email: "Enviar correo",
       },
@@ -116,9 +116,8 @@ const resources = {
         title: "Nuestras Soluciones",
         sub: "Planes claros, precios honestos, entrega rápida. Elige el que mejor se adapta a tu negocio.",
         tabAll: "Todos",
-        tabSite: "NEXVIA SITE",
-        tabPos: "NEXVIA POS",
-        popular: "Más popular",
+        tabSite: "Nexvia Site",
+        tabPos: "Nexvia POS",
         delivery: "Entrega",
         days: "días",
         quote: "Cotizar",
