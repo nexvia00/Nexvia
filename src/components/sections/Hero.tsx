@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { MagneticButton } from "../MagneticButton";
 import { waLink } from "@/lib/constants";
 import { Link } from "@tanstack/react-router";
+import nLight from "@/assets/nexvia-n-light.png";
 
 function GradientMesh() {
   const reduce = useReducedMotion();
