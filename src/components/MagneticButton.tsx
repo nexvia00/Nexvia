@@ -26,8 +26,8 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 500, damping: 25, mass: 0.3 });
-  const springY = useSpring(y, { stiffness: 500, damping: 25, mass: 0.3 });
+  const springX = useSpring(x, { stiffness: 1200, damping: 35, mass: 0.1 });
+  const springY = useSpring(y, { stiffness: 1200, damping: 35, mass: 0.1 });
 
   const handleMove = (e: React.MouseEvent) => {
     if (reduce) return;
@@ -40,8 +40,8 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
     const dy = e.clientY - cy;
     const dist = Math.hypot(dx, dy);
     if (dist < 80) {
-      x.set(dx * 0.3);
-      y.set(dy * 0.3);
+      x.set(dx * 0.6);
+      y.set(dy * 0.6);
     } else {
       x.set(0);
       y.set(0);
