@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import logoDark from "@/assets/nexvia-letras-dark.png";
-import logoLight from "@/assets/nexvia-letras-light.png";
+import logoDark from "@/assets/nexvia-letras-dark.svg";
+import logoLight from "@/assets/nexvia-letras-light.svg";
 
 export function Logo({ className = "" }: { className?: string }) {
   const [isDark, setIsDark] = useState(false);
@@ -18,9 +18,9 @@ export function Logo({ className = "" }: { className?: string }) {
     <img
       src={isDark ? logoLight : logoDark}
       alt="NEXVIA"
-      width={1680}
-      height={204}
-      className={`h-7 md:h-8 w-auto select-none object-contain ${className}`}
+      width={840}
+      height={102}
+      className={`h-4 md:h-5 w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );
