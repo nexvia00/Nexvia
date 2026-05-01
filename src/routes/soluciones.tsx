@@ -11,7 +11,7 @@ import { waLink } from "@/lib/constants";
 export const Route = createFileRoute("/soluciones")({
   head: () => ({
     meta: [
-      { title: "Soluciones — NEXVIA SITE & POS para Yucatán" },
+      { title: "Soluciones — Nexvia Site & POS para Yucatán" },
       {
         name: "description",
         content:
@@ -154,11 +154,11 @@ function Solutions() {
             <section className="py-16">
               <div className="container-x">
                 <Reveal>
-                  <h2 className="mb-10">NEXVIA SITE</h2>
+                  <h2 className="mb-10">Nexvia Site</h2>
                 </Reveal>
                 <div className="grid md:grid-cols-3 gap-6">
                   {sitePlans.map((p) => (
-                    <PlanCard key={p.key} plan={p} family="NEXVIA SITE" />
+                    <PlanCard key={p.key} plan={p} family="Nexvia Site" />
                   ))}
                 </div>
               </div>
@@ -169,11 +169,11 @@ function Solutions() {
             <section className="py-16">
               <div className="container-x">
                 <Reveal>
-                  <h2 className="mb-10">NEXVIA POS</h2>
+                  <h2 className="mb-10">Nexvia POS</h2>
                 </Reveal>
                 <div className="grid md:grid-cols-3 gap-6">
                   {posPlans.map((p) => (
-                    <PlanCard key={p.key} plan={p} family="NEXVIA POS" />
+                    <PlanCard key={p.key} plan={p} family="Nexvia POS" />
                   ))}
                 </div>
               </div>
