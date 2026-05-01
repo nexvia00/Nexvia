@@ -1,7 +1,7 @@
-import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
@@ -12,10 +12,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
   const lastScrollY = useRef(0);
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,15 +37,6 @@ export function Header() {
     { to: "/contacto", label: t("nav.contact") },
   ] as const;
 
-  const onSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = query.trim().toLowerCase();
-    if (!q) return;
-    if (q.includes("contact")) navigate({ to: "/contacto" });
-    else if (q.includes("sol") || q.includes("plan") || q.includes("pos") || q.includes("site"))
-      navigate({ to: "/soluciones" });
-    else navigate({ to: "/" });
-  };
 
   return (
     <header
@@ -79,23 +68,6 @@ export function Header() {
             </Link>
           ))}
         </nav>
-
-        <form
-          onSubmit={onSearch}
-          className="hidden md:flex items-center gap-2 rounded-full border border-border px-3 py-1.5 bg-transparent focus-within:border-mint transition-colors"
-          style={{ width: 200 }}
-          role="search"
-        >
-          <Search size={14} className="text-muted-foreground shrink-0" />
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar..."
-            aria-label="Buscar"
-            className="bg-transparent outline-none text-sm w-full text-foreground placeholder:text-muted-foreground"
-          />
-        </form>
 
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <LangToggle />

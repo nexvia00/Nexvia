@@ -18,8 +18,9 @@ export function Logo({ className = "" }: { className?: string }) {
     <img
       src={isDark ? logoLight : logoDark}
       alt="NEXVIA"
-      className={`h-8 w-auto select-none ${className}`}
-      style={{ maxHeight: 32 }}
+      width={1680}
+      height={204}
+      className={`h-7 md:h-8 w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );
