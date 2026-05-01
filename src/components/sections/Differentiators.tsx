@@ -28,9 +28,6 @@ export function Differentiators() {
                   <span className="absolute top-0 left-8 right-8 h-px bg-mint/40 group-hover:left-0 group-hover:right-0 transition-all duration-500" />
                   <div className="flex items-start justify-between">
                     <Icon size={28} className="text-lime" />
-                    <span className="font-display text-sm text-muted-foreground tabular-nums">
-                      0{i + 1}
-                    </span>
                   </div>
                   <h3 className="mt-8 text-2xl font-display font-semibold">{it.title}</h3>
                   <p className="mt-3 text-muted-foreground">{it.desc}</p>

@@ -26,8 +26,8 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 150, damping: 15 });
-  const springY = useSpring(y, { stiffness: 150, damping: 15 });
+  const springX = useSpring(x, { stiffness: 200, damping: 20 });
+  const springY = useSpring(y, { stiffness: 200, damping: 20 });
 
   const handleMove = (e: React.MouseEvent) => {
     if (reduce) return;
@@ -56,6 +56,8 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   const inner = (
     <motion.span
       style={{ x: springX, y: springY }}
+      whileHover={reduce ? undefined : { scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 300, damping: 18 }}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-base transition-all duration-300 cursor-pointer select-none",
         variantClasses[variant],
