@@ -12,10 +12,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
   const lastScrollY = useRef(0);
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => {
