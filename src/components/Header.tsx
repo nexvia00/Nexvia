@@ -69,23 +69,6 @@ export function Header() {
           ))}
         </nav>
 
-        <form
-          onSubmit={onSearch}
-          className="hidden md:flex items-center gap-2 rounded-full border border-border px-3 py-1.5 bg-transparent focus-within:border-mint transition-colors"
-          style={{ width: 200 }}
-          role="search"
-        >
-          <Search size={14} className="text-muted-foreground shrink-0" />
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar..."
-            aria-label="Buscar"
-            className="bg-transparent outline-none text-sm w-full text-foreground placeholder:text-muted-foreground"
-          />
-        </form>
-
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <LangToggle />
           <ThemeToggle />
