@@ -136,12 +136,12 @@ function Contact() {
                     </label>
                     <select id="f-plan" value={form.plan} onChange={onChange("plan")} className={inputCls}>
                       <option value="">{t("contact.form.planNone")}</option>
-                      <option>NEXVIA SITE — Básico</option>
-                      <option>NEXVIA SITE — Comercial</option>
-                      <option>NEXVIA SITE — Pro</option>
-                      <option>NEXVIA POS — Esencial</option>
-                      <option>NEXVIA POS — Cocina</option>
-                      <option>NEXVIA POS — Full</option>
+                      <option>Nexvia Site — Básico</option>
+                      <option>Nexvia Site — Comercial</option>
+                      <option>Nexvia Site — Pro</option>
+                      <option>Nexvia POS — Esencial</option>
+                      <option>Nexvia POS — Cocina</option>
+                      <option>Nexvia POS — Full</option>
                     </select>
                   </div>
 

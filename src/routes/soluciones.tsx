@@ -11,7 +11,7 @@ import { waLink } from "@/lib/constants";
 export const Route = createFileRoute("/soluciones")({
   head: () => ({
     meta: [
-      { title: "Soluciones — NEXVIA SITE & POS para Yucatán" },
+      { title: "Soluciones — Nexvia Site & POS para Yucatán" },
       {
         name: "description",
         content:
@@ -48,11 +48,7 @@ function PlanCard({ plan, family }: { plan: Plan; family: string }) {
         plan.popular ? "border-lime shadow-[0_0_40px_-15px_var(--lime)]" : "border-border"
       } bg-card p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-mint`}
     >
-      {plan.popular && (
-        <span className="absolute -top-3 left-8 rounded-full bg-lime text-deep px-3 py-1 text-xs font-bold uppercase tracking-wider">
-          {t("solutions.popular")}
-        </span>
-      )}
+      {/* highlighted plan keeps lime border without label */}
       <span className="text-xs uppercase tracking-[0.2em] text-mint font-semibold">{family}</span>
       <h3 className="mt-3 text-3xl font-display font-bold">{plan.name}</h3>
       <p className="mt-2 text-muted-foreground">{plan.tag}</p>
@@ -154,11 +150,11 @@ function Solutions() {
             <section className="py-16">
               <div className="container-x">
                 <Reveal>
-                  <h2 className="mb-10">NEXVIA SITE</h2>
+                  <h2 className="mb-10">Nexvia Site</h2>
                 </Reveal>
                 <div className="grid md:grid-cols-3 gap-6">
                   {sitePlans.map((p) => (
-                    <PlanCard key={p.key} plan={p} family="NEXVIA SITE" />
+                    <PlanCard key={p.key} plan={p} family="Nexvia Site" />
                   ))}
                 </div>
               </div>
@@ -169,11 +165,11 @@ function Solutions() {
             <section className="py-16">
               <div className="container-x">
                 <Reveal>
-                  <h2 className="mb-10">NEXVIA POS</h2>
+                  <h2 className="mb-10">Nexvia POS</h2>
                 </Reveal>
                 <div className="grid md:grid-cols-3 gap-6">
                   {posPlans.map((p) => (
-                    <PlanCard key={p.key} plan={p} family="NEXVIA POS" />
+                    <PlanCard key={p.key} plan={p} family="Nexvia POS" />
                   ))}
                 </div>
               </div>

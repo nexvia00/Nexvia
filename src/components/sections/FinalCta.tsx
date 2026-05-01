@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Reveal } from "../Reveal";
 import { MagneticButton } from "../MagneticButton";
 import { waLink, mailLink } from "@/lib/constants";
+import nLight from "@/assets/nexvia-n-light.png";
 
 export function FinalCta() {
   const { t } = useTranslation();
@@ -18,6 +19,12 @@ export function FinalCta() {
                   "radial-gradient(circle at 20% 30%, var(--lime) 0%, transparent 45%), radial-gradient(circle at 80% 70%, var(--mint) 0%, transparent 45%)",
                 filter: "blur(60px)",
               }}
+            />
+            <img
+              src={nLight}
+              alt=""
+              aria-hidden
+              className="pointer-events-none absolute -right-10 -bottom-10 w-[420px] max-w-[60%] opacity-[0.06] select-none"
             />
             <div className="relative max-w-3xl">
               <h2 className="text-cream">{t("finalCta.title")}</h2>

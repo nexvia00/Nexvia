@@ -1,21 +1,31 @@
-import { Link, useLocation } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { LangToggle } from "./LangToggle";
-import { MagneticButton } from "./MagneticButton";
 
 export function Header() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const lastScrollY = useRef(0);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      const delta = y - lastScrollY.current;
+      if (y > 80 && delta > 4) setHidden(true);
+      else if (delta < -4) setHidden(false);
+      lastScrollY.current = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,9 +39,21 @@ export function Header() {
     { to: "/contacto", label: t("nav.contact") },
   ] as const;
 
+  const onSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = query.trim().toLowerCase();
+    if (!q) return;
+    if (q.includes("contact")) navigate({ to: "/contacto" });
+    else if (q.includes("sol") || q.includes("plan") || q.includes("pos") || q.includes("site"))
+      navigate({ to: "/soluciones" });
+    else navigate({ to: "/" });
+  };
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      } ${
         scrolled
           ? "backdrop-blur-xl bg-background/70 border-b border-border"
           : "bg-transparent border-b border-transparent"
@@ -40,8 +62,8 @@ export function Header() {
       <a href="#main" className="skip-link">
         {t("nav.skip")}
       </a>
-      <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <Link to="/" aria-label="NEXVIA">
+      <div className="container-x flex items-center justify-between h-16 md:h-20 gap-4">
+        <Link to="/" aria-label="NEXVIA" className="shrink-0">
           <Logo />
         </Link>
 
@@ -58,14 +80,26 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        <form
+          onSubmit={onSearch}
+          className="hidden md:flex items-center gap-2 rounded-full border border-border px-3 py-1.5 bg-transparent focus-within:border-mint transition-colors"
+          style={{ width: 200 }}
+          role="search"
+        >
+          <Search size={14} className="text-muted-foreground shrink-0" />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Buscar..."
+            aria-label="Buscar"
+            className="bg-transparent outline-none text-sm w-full text-foreground placeholder:text-muted-foreground"
+          />
+        </form>
+
+        <div className="hidden md:flex items-center gap-2 shrink-0">
           <LangToggle />
           <ThemeToggle />
-          <Link to="/soluciones" className="ml-2">
-            <MagneticButton variant="primary" className="px-4 py-2 text-sm">
-              {t("nav.cta")}
-            </MagneticButton>
-          </Link>
         </div>
 
         <button

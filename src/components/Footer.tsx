@@ -47,8 +47,8 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold mb-4">{t("footer.productsCol")}</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/soluciones" className="hover:text-foreground">NEXVIA SITE</Link></li>
-            <li><Link to="/soluciones" className="hover:text-foreground">NEXVIA POS</Link></li>
+            <li><Link to="/soluciones" className="hover:text-foreground">Nexvia Site</Link></li>
+            <li><Link to="/soluciones" className="hover:text-foreground">Nexvia POS</Link></li>
           </ul>
         </div>
 

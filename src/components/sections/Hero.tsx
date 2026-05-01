@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { MagneticButton } from "../MagneticButton";
 import { waLink } from "@/lib/constants";
 import { Link } from "@tanstack/react-router";
+import nLight from "@/assets/nexvia-n-light.png";
 
 function GradientMesh() {
   const reduce = useReducedMotion();
@@ -60,6 +61,13 @@ export function Hero() {
       <motion.div style={reduce ? undefined : { y: bgY }} className="absolute inset-0">
         <GradientMesh />
       </motion.div>
+
+      <img
+        src={nLight}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-[-6%] bottom-[-10%] w-[55vw] max-w-[700px] opacity-[0.05] select-none z-0"
+      />
 
       <div className="container-x relative z-10 py-32">
         <motion.div
