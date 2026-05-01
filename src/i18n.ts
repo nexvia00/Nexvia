@@ -274,28 +274,28 @@ const resources = {
         eyebrow: "Our products",
         title: "Two solutions, made for your business.",
         site: {
-          name: "NEXVIA SITE",
+          name: "Nexvia Site",
           tagline: "Digital Presence and Online Sales",
           desc: "Fast, modern websites that turn visitors into customers — no jargon.",
         },
         pos: {
-          name: "NEXVIA POS",
+          name: "Nexvia POS",
           tagline: "Point of Sale for Kitchens and Stores",
-          desc: "Sales systems built for the reality of Yucatecan businesses. Easy to use.",
+          desc: "Sales systems built for the reality of local businesses. Easy to use.",
         },
         seePlans: "See plans",
       },
       diff: {
         eyebrow: "Why Nexvia",
-        title: "Four reasons we're different.",
+        title: "The reasons we're different.",
         items: [
           {
             title: "We're local",
-            desc: "We have an office in Hunucmá. You're not a support ticket — you're a neighbor.",
+            desc: "We have an office in Hunucmá, Yucatán. You're not a support ticket — you're a neighbor.",
           },
           {
             title: "Introductory pricing",
-            desc: "We're starting out and want to earn your trust. The most accessible prices in the region.",
+            desc: "The most accessible prices in the region. We're starting out and want to earn your trust.",
           },
           {
             title: "No jargon",
@@ -313,7 +313,7 @@ const resources = {
         items: [
           {
             q: "Do I need to know tech to use your systems?",
-            a: "No. We design everything for people who have never used a system. If your mom can use WhatsApp, she can use Nexvia.",
+            a: "No. We design everything for people who have never used a system. If your mother can use WhatsApp, she can use Nexvia.",
           },
           {
             q: "How long does it take to be ready?",
@@ -334,8 +334,8 @@ const resources = {
         ],
       },
       finalCta: {
-        title: "Ready to take your business to the better path?",
-        sub: "Let's talk, no commitment. We listen first, then propose.",
+        title: "Let's talk!",
+        sub: "We listen first, then propose.",
         whatsapp: "Chat on WhatsApp",
         email: "Send email",
       },
@@ -351,9 +351,8 @@ const resources = {
         title: "Our Solutions",
         sub: "Clear plans, honest pricing, fast delivery. Pick the one that fits your business.",
         tabAll: "All",
-        tabSite: "NEXVIA SITE",
-        tabPos: "NEXVIA POS",
-        popular: "Most popular",
+        tabSite: "Nexvia Site",
+        tabPos: "Nexvia POS",
         delivery: "Delivery",
         days: "days",
         quote: "Get a quote",
