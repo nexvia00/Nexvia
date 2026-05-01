@@ -37,15 +37,6 @@ export function Header() {
     { to: "/contacto", label: t("nav.contact") },
   ] as const;
 
-  const onSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = query.trim().toLowerCase();
-    if (!q) return;
-    if (q.includes("contact")) navigate({ to: "/contacto" });
-    else if (q.includes("sol") || q.includes("plan") || q.includes("pos") || q.includes("site"))
-      navigate({ to: "/soluciones" });
-    else navigate({ to: "/" });
-  };
 
   return (
     <header
