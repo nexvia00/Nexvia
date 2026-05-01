@@ -70,17 +70,7 @@ export function Hero() {
       />
 
       <div className="container-x relative z-10 py-32">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur"
-        >
-          <span className="h-2 w-2 rounded-full bg-mint animate-pulse" />
-          {t("hero.eyebrow")}
-        </motion.div>
-
-        <h1 className="mt-6 max-w-5xl">
+        <h1 className="max-w-5xl">
           {words.map((w, i) => (
             <motion.span
               key={`${w}-${i}`}
