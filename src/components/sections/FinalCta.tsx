@@ -10,8 +10,8 @@ export function FinalCta() {
     <section className="py-12">
       <div className="container-x">
         <Reveal>
-          <div className="group relative overflow-hidden rounded-3xl bg-forest text-cream px-8 py-20 md:px-16 md:py-28 border border-border hover:border-mint transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_80px_-30px_var(--mint)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-mint/0 via-mint/0 to-lime/0 group-hover:from-mint/20 group-hover:via-mint/10 group-hover:to-lime/30 transition-all duration-700" />
+          <div className="relative overflow-hidden rounded-3xl bg-forest text-cream px-8 py-20 md:px-16 md:py-28 border border-mint shadow-[0_30px_80px_-30px_var(--mint)]">
+            <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-mint/10 to-lime/30" />
             <img
               src={nLight}
               alt=""
