@@ -1,5 +1,5 @@
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
-import { forwardRef, useRef, type ButtonHTMLAttributes, type ReactNode } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type Variant = "primary" | "ghost" | "secondary";
@@ -22,40 +22,21 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   { variant = "primary", asLink, children, className, ...props },
   ref,
 ) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 1200, damping: 35, mass: 0.1 });
-  const springY = useSpring(y, { stiffness: 1200, damping: 35, mass: 0.1 });
-
-  const handleMove = (e: React.MouseEvent) => {
-    if (reduce) return;
-    const el = wrapperRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const dx = e.clientX - cx;
-    const dy = e.clientY - cy;
-    const maxX = rect.width / 2;
-    const maxY = rect.height / 2;
-    x.set(Math.max(-maxX, Math.min(maxX, dx * 0.4)));
-    y.set(Math.max(-maxY, Math.min(maxY, dy * 0.4)));
-  };
-
-  const handleLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
 
   const inner = (
     <motion.span
-      style={{ x: springX, y: springY }}
-      whileHover={reduce ? undefined : { scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300, damping: 18 }}
+      whileHover={
+        reduce
+          ? undefined
+          : {
+              scale: [1, 1.12, 0.96, 1.06, 1],
+              transition: { duration: 0.55, times: [0, 0.3, 0.55, 0.8, 1], ease: "easeOut" },
+            }
+      }
+      whileTap={reduce ? undefined : { scale: 0.94 }}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-base transition-all duration-300 cursor-pointer select-none",
+        "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 font-semibold text-base transition-colors duration-300 cursor-pointer select-none",
         variantClasses[variant],
         className,
       )}
@@ -65,16 +46,7 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   );
 
   return (
-    <div
-      ref={(node) => {
-        wrapperRef.current = node;
-        if (typeof ref === "function") ref(node);
-        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
-      }}
-      onMouseMove={handleMove}
-      onMouseLeave={handleLeave}
-      className="inline-block"
-    >
+    <div ref={ref} className="inline-block">
       {asLink ? (
         <a
           href={asLink.href}
