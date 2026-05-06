@@ -10,7 +10,7 @@ export function FinalCta() {
     <section className="py-12">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-forest text-cream px-8 py-20 md:px-16 md:py-28 border border-mint shadow-[0_30px_80px_-30px_var(--mint)]">
+          <div className="relative overflow-hidden rounded-3xl bg-forest text-cream px-8 py-20 md:px-16 md:py-28 border border-border shadow-[0_30px_80px_-30px_var(--mint)]">
             <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-mint/10 to-lime/30" />
             <img
               src={nLight}
