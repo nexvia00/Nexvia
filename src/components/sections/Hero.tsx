@@ -66,7 +66,7 @@ export function Hero() {
         src={nLight}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute right-[-6%] bottom-[-10%] w-[55vw] max-w-[700px] opacity-[0.05] select-none z-0"
+        className="pointer-events-none absolute right-[2%] bottom-[5%] w-[45vw] max-w-[600px] object-contain opacity-[0.05] select-none z-0"
       />
 
       <div className="container-x relative z-10 py-32">
