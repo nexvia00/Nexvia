@@ -25,7 +25,7 @@ export function Differentiators() {
             return (
               <Reveal key={it.title} delay={i * 0.08}>
                 <div className="group relative h-full rounded-2xl border border-border bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-mint hover:shadow-[0_20px_50px_-20px_var(--mint)]">
-                  <span className="absolute top-0 left-8 right-8 h-px bg-mint/40 group-hover:left-0 group-hover:right-0 transition-all duration-500" />
+                  
                   <div className="flex items-start justify-between">
                     <Icon size={28} className="text-lime dark:text-mint" />
                   </div>
