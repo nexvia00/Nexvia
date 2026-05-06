@@ -28,11 +28,13 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const springX = useSpring(x, { stiffness: 1200, damping: 35, mass: 0.1 });
-  const springY = useSpring(y, { stiffness: 1200, damping: 35, mass: 0.1 });
+  const springConfig = { stiffness: 120, damping: 20, mass: 0.6, restDelta: 0.001 };
+  const springX = useSpring(x, springConfig);
+  const springY = useSpring(y, springConfig);
+  const enterTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isHovering = useRef(false);
 
-  const handleMove = (e: React.MouseEvent) => {
-    if (reduce) return;
+  const applyOffset = (e: React.MouseEvent) => {
     const el = wrapperRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -44,7 +46,29 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
     y.set(Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, dy)));
   };
 
+  const handleEnter = (e: React.MouseEvent) => {
+    if (reduce) return;
+    isHovering.current = true;
+    if (enterTimer.current) clearTimeout(enterTimer.current);
+    const event = e;
+    enterTimer.current = setTimeout(() => {
+      enterTimer.current = null;
+      if (isHovering.current) applyOffset(event);
+    }, 500);
+  };
+
+  const handleMove = (e: React.MouseEvent) => {
+    if (reduce || !isHovering.current) return;
+    if (enterTimer.current) return;
+    applyOffset(e);
+  };
+
   const handleLeave = () => {
+    isHovering.current = false;
+    if (enterTimer.current) {
+      clearTimeout(enterTimer.current);
+      enterTimer.current = null;
+    }
     x.set(0);
     y.set(0);
   };
@@ -69,6 +93,7 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
         if (typeof ref === "function") ref(node);
         else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
       }}
+      onMouseEnter={handleEnter}
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
       className="inline-block"
