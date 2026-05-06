@@ -52,6 +52,7 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
     if (enterTimer.current) clearTimeout(enterTimer.current);
     const event = e;
     enterTimer.current = setTimeout(() => {
+      enterTimer.current = null;
       if (isHovering.current) applyOffset(event);
     }, 500);
   };
