@@ -24,7 +24,7 @@ export function FinalCta() {
               src={nLight}
               alt=""
               aria-hidden
-              className="pointer-events-none absolute -right-10 -bottom-10 w-[420px] max-w-[60%] opacity-[0.06] select-none"
+              className="pointer-events-none absolute right-6 bottom-6 w-[320px] max-w-[45%] object-contain opacity-[0.06] select-none"
             />
             <div className="relative max-w-3xl">
               <h2 className="text-cream">{t("finalCta.title")}</h2>
