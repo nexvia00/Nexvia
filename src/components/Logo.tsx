@@ -16,11 +16,11 @@ export function Logo({ className = "" }: { className?: string }) {
 
   return (
     <img
-      src={isDark ? logoLight : logoDark}
+      src={isDark ? logoDark : logoLight}
       alt="NEXVIA"
       width={840}
       height={102}
-      className={`h-4 md:h-5 w-auto select-none object-contain ${className}`}
+      className={`h-2 md:h-2.5 w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );
