@@ -20,7 +20,7 @@ export function Logo({ className = "" }: { className?: string }) {
       alt="NEXVIA"
       width={840}
       height={102}
-      className={`h-2 md:h-3 w-auto select-none object-contain ${className}`}
+      className={`h-2.5 md:h-3.5 w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );
