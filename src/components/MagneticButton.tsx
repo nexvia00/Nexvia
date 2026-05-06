@@ -54,7 +54,7 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
     enterTimer.current = setTimeout(() => {
       enterTimer.current = null;
       if (isHovering.current) applyOffset(event);
-    }, 500);
+    }, 200);
   };
 
   const handleMove = (e: React.MouseEvent) => {
