@@ -38,14 +38,10 @@ export const MagneticButton = forwardRef<HTMLDivElement, Props>(function Magneti
     const cy = rect.top + rect.height / 2;
     const dx = e.clientX - cx;
     const dy = e.clientY - cy;
-    const dist = Math.hypot(dx, dy);
-    if (dist < 80) {
-      x.set(dx * 0.6);
-      y.set(dy * 0.6);
-    } else {
-      x.set(0);
-      y.set(0);
-    }
+    const maxX = rect.width / 2;
+    const maxY = rect.height / 2;
+    x.set(Math.max(-maxX, Math.min(maxX, dx * 0.4)));
+    y.set(Math.max(-maxY, Math.min(maxY, dy * 0.4)));
   };
 
   const handleLeave = () => {
