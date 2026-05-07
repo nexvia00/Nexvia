@@ -345,8 +345,16 @@ const resources = {
             a: "It's yours. You pay once for the setup and decide what to do with it. No locks, no surprises.",
           },
           {
-            q: "Why are your prices more accessible?",
-            a: "Because we're starting out and want to earn your trust. As we grow, prices will rise — but current clients keep their rate.",
+            q: "Do prices change over time?",
+            a: "No, current clients keep their rate. Always.",
+          },
+          {
+            q: "Do I need internet for the POS to work?",
+            a: "Yes, because your servers and infrastructure use online services.",
+          },
+          {
+            q: "Can I see my sales from my phone?",
+            a: "Yes you can. You only need a phone connected to the internet so sales never stop.",
           },
         ],
       },
