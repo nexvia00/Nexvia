@@ -311,8 +311,8 @@ const resources = {
             desc: "We have an office in Hunucmá, Yucatán. You're not a support ticket — you're a neighbor.",
           },
           {
-            title: "Introductory pricing",
-            desc: "The most accessible prices in the region. We're starting out and want to earn your trust.",
+            title: "Proposal",
+            desc: "We work with businesses like yours to prove what you're worth.",
           },
           {
             title: "No jargon",
@@ -320,7 +320,7 @@ const resources = {
           },
           {
             title: "You're in control",
-            desc: "The systems are yours. You can run them without depending on us.",
+            desc: "The systems are yours. You can run and customize them to your needs.",
           },
         ],
       },
