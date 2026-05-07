@@ -65,7 +65,7 @@ function Contact() {
 
   return (
     <PageShell>
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 grain">
         <div className="container-x">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.2em] text-mint font-semibold">
