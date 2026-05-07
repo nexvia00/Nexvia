@@ -92,8 +92,16 @@ const resources = {
             a: "Es tuyo. Pagas una vez por la implementación y tú decides qué hacer con él. Sin candados, sin sorpresas.",
           },
           {
-            q: "¿Por qué sus precios son más accesibles?",
-            a: "Porque estamos empezando y queremos ganar tu confianza. Conforme crezcamos, los precios se ajustarán — pero los clientes actuales conservan su tarifa.",
+            q: "¿Los precios cambian conforme pasa el tiempo?",
+            a: "No, los clientes actuales conservan su tarifa. Siempre.",
+          },
+          {
+            q: "¿Necesito internet para que funcione el POS?",
+            a: "Sí, porque tus servidores e infraestructura utilizan servicios en línea.",
+          },
+          {
+            q: "¿Puedo ver mis ventas desde el celular?",
+            a: "Sí puedes. Solo hace falta un teléfono conectado a internet para que las ventas nunca paren.",
           },
         ],
       },
