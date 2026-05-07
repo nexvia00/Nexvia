@@ -415,7 +415,7 @@ const resources = {
           },
           comercial: {
             name: "Commercial",
-            tag: "For businesses that want to sell online",
+            tag: "For businesses that want to sell online. Your catalog open 24 hours.",
             features: [
               "Site with up to 5 sections",
               "Product catalog",
