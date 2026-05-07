@@ -359,10 +359,22 @@ const resources = {
         ],
       },
       finalCta: {
-        title: "Let's talk!",
-        sub: "We listen first, then propose.",
+        title: "We have the answer.",
+        sub: "Tell us about your business and we'll build exactly what you need.",
         whatsapp: "Chat on WhatsApp",
         email: "Send email",
+      },
+      process: {
+        eyebrow: "How we work",
+        title: "From first message to working system.",
+        steps: [
+          "You message us",
+          "We schedule a chat",
+          "We present the proposal",
+          "We design and develop",
+          "We install",
+          "We train",
+        ],
       },
       footer: {
         tagline: "The link to a new path.",
