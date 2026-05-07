@@ -144,12 +144,15 @@ function Contact() {
                     </label>
                     <select id="f-plan" value={form.plan} onChange={onChange("plan")} className={inputCls}>
                       <option value="">{t("contact.form.planNone")}</option>
-                      <option>Nexvia Site — Básico</option>
-                      <option>Nexvia Site — Comercial</option>
-                      <option>Nexvia Site — Pro</option>
-                      <option>Nexvia POS — Esencial</option>
-                      <option>Nexvia POS — Cocina</option>
-                      <option>Nexvia POS — Full</option>
+                      {planParam && !["Nexvia Site Básico","Nexvia Site Comercial","Nexvia Site Pro","Nexvia POS Esencial","Nexvia POS Cocina","Nexvia POS Full"].includes(planParam) && (
+                        <option value={planParam}>{planParam}</option>
+                      )}
+                      <option>Nexvia Site Básico</option>
+                      <option>Nexvia Site Comercial</option>
+                      <option>Nexvia Site Pro</option>
+                      <option>Nexvia POS Esencial</option>
+                      <option>Nexvia POS Cocina</option>
+                      <option>Nexvia POS Full</option>
                     </select>
                   </div>
 
