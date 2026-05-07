@@ -58,8 +58,8 @@ const resources = {
             desc: "Tenemos oficina en Hunucmá, Yucatán. No eres un ticket de soporte — eres un vecino.",
           },
           {
-            title: "Precios de introducción",
-            desc: "Los más accesibles de la región. Estamos comenzando y queremos ganar tu confianza.",
+            title: "Propuesta",
+            desc: "Trabajamos con negocios como el tuyo para demostrar lo que vales.",
           },
           {
             title: "Sin tecnicismos",
@@ -67,7 +67,7 @@ const resources = {
           },
           {
             title: "Tú tienes el control",
-            desc: "Los sistemas son tuyos. Puedes operarlos sin depender de nosotros.",
+            desc: "Los sistemas son tuyos. Puedes operarlos y personalizarlos a tus necesidades.",
           },
         ],
       },
