@@ -455,7 +455,7 @@ const resources = {
           },
           cocina: {
             name: "Kitchen",
-            tag: "For taquerías, eateries, restaurants",
+            tag: "Orders reach the kitchen on their own — you just serve.",
             features: [
               "Orders sent to kitchen",
               "Tables and split bills",
