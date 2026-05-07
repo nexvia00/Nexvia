@@ -270,7 +270,7 @@ const resources = {
       hero: {
         eyebrow: "Local technology · Yucatán",
         title: "We are the link to a new path.",
-        sub: "If it needs too much explaining, it isn't done right. Systems, websites, and technology built for real businesses in Yucatán. No complications, no jargon — just results you can see.",
+        sub: "If it needs too much explaining, it isn't done right. Systems, websites, and technology built for real businesses in Yucatán. No complications, no jargon.",
         ctaPrimary: "See Solutions",
         ctaSecondary: "Chat on WhatsApp",
         scroll: "Scroll",
