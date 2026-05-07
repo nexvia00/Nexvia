@@ -134,7 +134,6 @@ const resources = {
       solutions: {
         title: "Nuestras Soluciones",
         sub: "Planes claros, precios honestos, entrega rápida. Elige el que mejor se adapta a tu negocio.",
-        tabAll: "Todos",
         tabSite: "Nexvia Site",
         tabPos: "Nexvia POS",
         delivery: "Entrega",
