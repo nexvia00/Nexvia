@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
-import { ThemeToggle } from "./ThemeToggle";
 import { LangToggle } from "./LangToggle";
 
 export function Header() {
@@ -71,7 +70,6 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <LangToggle />
-          <ThemeToggle />
         </div>
 
         <button
@@ -115,7 +113,6 @@ export function Header() {
             </nav>
             <div className="mt-auto flex items-center gap-2">
               <LangToggle />
-              <ThemeToggle />
             </div>
           </motion.div>
         )}
