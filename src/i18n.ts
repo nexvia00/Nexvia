@@ -214,7 +214,7 @@ const resources = {
           },
           full: {
             name: "Full",
-            tag: "Para operaciones grandes o con varias áreas",
+            tag: "Controla todo desde un solo lugar.",
             features: [
               "Múltiples puntos de venta",
               "Inventario por sucursal",
