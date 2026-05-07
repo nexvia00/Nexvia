@@ -190,7 +190,7 @@ const resources = {
         pos: {
           esencial: {
             name: "Esencial",
-            tag: "Para tiendas, abarrotes, boutiques",
+            tag: "Para tiendas, abarrotes y cualquier tipo de negocio. Cobra más rápido, pierde menos tiempo.",
             features: [
               "Ventas y cobro rápido",
               "Control de inventario",
