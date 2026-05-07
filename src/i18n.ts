@@ -278,14 +278,13 @@ const resources = {
       why: {
         eyebrow: "Why we exist",
         statement:
-          "NEXVIA exists to change the lives of businesses — with accessible technology, local support, and systems the owner can understand and control from day one.",
+          "Many businesses in Yucatán still use paper and a calculator — not because they want to, but because they've spent years being sold technology they don't understand, at prices they can't afford, with support that never arrives. Nexvia exists to change this.",
         pills: [
-          "Better management",
-          "Re-engineering",
-          "Lower costs",
-          "Efficient work",
-          "Intuitive use",
-          "Growth",
+          "Improve your business management",
+          "Apply reengineering solutions",
+          "Reduce operational costs",
+          "Work more efficiently",
+          "Expand your market and brand",
         ],
       },
       products: {
