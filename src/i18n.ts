@@ -175,7 +175,7 @@ const resources = {
           },
           pro: {
             name: "Pro",
-            tag: "Para operación mixta (físico + digital)",
+            tag: "Tu tienda física y digital, trabajando juntas.",
             features: [
               "Sitio completo personalizado",
               "Tienda en línea con pagos",
