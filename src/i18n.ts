@@ -17,7 +17,7 @@ const resources = {
       hero: {
         eyebrow: "Tecnología local · Yucatán",
         title: "Somos el nexo hacia una nueva vía.",
-        sub: "Si hay que explicarlo mucho, no está bien hecho. Sistemas, sitios web y tecnología diseñada para negocios reales en Yucatán. Sin complicaciones, sin tecnicismos — solo resultados que puedes ver.",
+        sub: "Si hay que explicarlo mucho, no está bien hecho. Sistemas, sitios web y tecnología diseñada para negocios reales en Yucatán. Sin complicaciones, sin tecnicismos.",
         ctaPrimary: "Ver Soluciones",
         ctaSecondary: "Hablar por WhatsApp",
         scroll: "Desplázate",
