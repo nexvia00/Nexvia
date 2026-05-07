@@ -150,7 +150,7 @@ const resources = {
         site: {
           basic: {
             name: "Básico",
-            tag: "Para negocios que hoy no existen en Google",
+            tag: "Para negocios que hoy no existen en Google.",
             features: [
               "Sitio de 1 página optimizado",
               "Diseño responsive",
