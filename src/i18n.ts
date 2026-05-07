@@ -403,7 +403,7 @@ const resources = {
         site: {
           basic: {
             name: "Basic",
-            tag: "For businesses that don't yet exist on Google",
+            tag: "For businesses that don't yet exist on Google.",
             features: [
               "Optimized 1-page site",
               "Responsive design",
