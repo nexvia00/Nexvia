@@ -17,7 +17,7 @@ const resources = {
       hero: {
         eyebrow: "Tecnología local · Yucatán",
         title: "Somos el nexo hacia una nueva vía.",
-        sub: "Si hay que explicarlo mucho, no está bien hecho. Sistemas, sitios web y tecnología diseñada para negocios reales en Yucatán. Sin complicaciones, sin tecnicismos — solo resultados que puedes ver.",
+        sub: "Si hay que explicarlo mucho, no está bien hecho. Sistemas, sitios web y tecnología diseñada para negocios reales en Yucatán. Sin complicaciones, sin tecnicismos.",
         ctaPrimary: "Ver Soluciones",
         ctaSecondary: "Hablar por WhatsApp",
         scroll: "Desplázate",
@@ -25,14 +25,13 @@ const resources = {
       why: {
         eyebrow: "Por qué existimos",
         statement:
-          "NEXVIA existe para cambiar la vida de los negocios — con tecnología accesible, soporte local y sistemas que el dueño puede entender y controlar desde el primer día.",
+          "Muchos negocios aquí en Yucatán siguen con cuaderno y calculadora — no porque quieran, sino porque llevan años vendiéndoles tecnología que no entienden, a precios que no se pueden pagar, con soporte que nunca llega. Nexvia existe para cambiar esto.",
         pills: [
-          "Mejorar gestión",
-          "Reingeniería",
-          "Reducir costos",
-          "Trabajo eficiente",
-          "Intuitividad",
-          "Expansión",
+          "Mejora la gestión de tu negocio",
+          "Aplica soluciones de reingeniería",
+          "Reduce costos de tus operaciones",
+          "Trabaja de forma eficiente",
+          "Expande tu mercado y marca",
         ],
       },
       products: {
@@ -59,8 +58,8 @@ const resources = {
             desc: "Tenemos oficina en Hunucmá, Yucatán. No eres un ticket de soporte — eres un vecino.",
           },
           {
-            title: "Precios de introducción",
-            desc: "Los más accesibles de la región. Estamos comenzando y queremos ganar tu confianza.",
+            title: "Propuesta",
+            desc: "Trabajamos con negocios como el tuyo para demostrar lo que vales.",
           },
           {
             title: "Sin tecnicismos",
@@ -68,7 +67,7 @@ const resources = {
           },
           {
             title: "Tú tienes el control",
-            desc: "Los sistemas son tuyos. Puedes operarlos sin depender de nosotros.",
+            desc: "Los sistemas son tuyos. Puedes operarlos y personalizarlos a tus necesidades.",
           },
         ],
       },
@@ -93,16 +92,36 @@ const resources = {
             a: "Es tuyo. Pagas una vez por la implementación y tú decides qué hacer con él. Sin candados, sin sorpresas.",
           },
           {
-            q: "¿Por qué sus precios son más accesibles?",
-            a: "Porque estamos empezando y queremos ganar tu confianza. Conforme crezcamos, los precios se ajustarán — pero los clientes actuales conservan su tarifa.",
+            q: "¿Los precios cambian conforme pasa el tiempo?",
+            a: "No, los clientes actuales conservan su tarifa. Siempre.",
+          },
+          {
+            q: "¿Necesito internet para que funcione el POS?",
+            a: "Sí, porque tus servidores e infraestructura utilizan servicios en línea.",
+          },
+          {
+            q: "¿Puedo ver mis ventas desde el celular?",
+            a: "Sí puedes. Solo hace falta un teléfono conectado a internet para que las ventas nunca paren.",
           },
         ],
       },
       finalCta: {
-        title: "¡Vamos a conversar!",
-        sub: "Te escuchamos primero, después proponemos.",
+        title: "Nosotros tenemos la respuesta.",
+        sub: "Cuéntame de tu negocio y nosotros creamos exactamente lo que necesitas.",
         whatsapp: "Hablar por WhatsApp",
         email: "Enviar correo",
+      },
+      process: {
+        eyebrow: "Cómo trabajamos",
+        title: "Del primer mensaje al sistema funcionando.",
+        steps: [
+          "Nos escribes",
+          "Agendamos una plática",
+          "Te presentamos la propuesta",
+          "Diseñamos y desarrollamos",
+          "Instalamos",
+          "Capacitamos",
+        ],
       },
       footer: {
         tagline: "El nexo hacia una nueva vía.",
@@ -115,7 +134,6 @@ const resources = {
       solutions: {
         title: "Nuestras Soluciones",
         sub: "Planes claros, precios honestos, entrega rápida. Elige el que mejor se adapta a tu negocio.",
-        tabAll: "Todos",
         tabSite: "Nexvia Site",
         tabPos: "Nexvia POS",
         delivery: "Entrega",
@@ -132,7 +150,7 @@ const resources = {
         site: {
           basic: {
             name: "Básico",
-            tag: "Para negocios que hoy no existen en Google",
+            tag: "Para negocios que hoy no existen en Google.",
             features: [
               "Sitio de 1 página optimizado",
               "Diseño responsive",
@@ -144,7 +162,7 @@ const resources = {
           },
           comercial: {
             name: "Comercial",
-            tag: "Para negocios que quieren vender en línea",
+            tag: "Para negocios que quieren vender en línea. Tu catálogo abierto las 24 horas.",
             features: [
               "Sitio de hasta 5 secciones",
               "Catálogo de productos",
@@ -157,7 +175,7 @@ const resources = {
           },
           pro: {
             name: "Pro",
-            tag: "Para operación mixta (físico + digital)",
+            tag: "Tu tienda física y digital, trabajando juntas.",
             features: [
               "Sitio completo personalizado",
               "Tienda en línea con pagos",
@@ -172,7 +190,7 @@ const resources = {
         pos: {
           esencial: {
             name: "Esencial",
-            tag: "Para tiendas, abarrotes, boutiques",
+            tag: "Para tiendas, abarrotes y cualquier tipo de negocio. Cobra más rápido, pierde menos tiempo.",
             features: [
               "Ventas y cobro rápido",
               "Control de inventario",
@@ -184,7 +202,7 @@ const resources = {
           },
           cocina: {
             name: "Cocina",
-            tag: "Para taquerías, cocinas económicas, restaurantes",
+            tag: "La comanda llega a cocina sola — tú solo atiende.",
             features: [
               "Comandas a cocina",
               "Mesas y cuentas separadas",
@@ -196,7 +214,7 @@ const resources = {
           },
           full: {
             name: "Full",
-            tag: "Para operaciones grandes o con varias áreas",
+            tag: "Controla todo desde un solo lugar.",
             features: [
               "Múltiples puntos de venta",
               "Inventario por sucursal",
@@ -252,7 +270,7 @@ const resources = {
       hero: {
         eyebrow: "Local technology · Yucatán",
         title: "We are the link to a new path.",
-        sub: "If it needs too much explaining, it isn't done right. Systems, websites, and technology built for real businesses in Yucatán. No complications, no jargon — just results you can see.",
+        sub: "If it needs too much explaining, it isn't done right. Systems, websites, and technology built for real businesses in Yucatán. No complications, no jargon.",
         ctaPrimary: "See Solutions",
         ctaSecondary: "Chat on WhatsApp",
         scroll: "Scroll",
@@ -260,14 +278,13 @@ const resources = {
       why: {
         eyebrow: "Why we exist",
         statement:
-          "NEXVIA exists to change the lives of businesses — with accessible technology, local support, and systems the owner can understand and control from day one.",
+          "Many businesses in Yucatán still use paper and a calculator — not because they want to, but because they've spent years being sold technology they don't understand, at prices they can't afford, with support that never arrives. Nexvia exists to change this.",
         pills: [
-          "Better management",
-          "Re-engineering",
-          "Lower costs",
-          "Efficient work",
-          "Intuitive use",
-          "Growth",
+          "Improve your business management",
+          "Apply reengineering solutions",
+          "Reduce operational costs",
+          "Work more efficiently",
+          "Expand your market and brand",
         ],
       },
       products: {
@@ -294,8 +311,8 @@ const resources = {
             desc: "We have an office in Hunucmá, Yucatán. You're not a support ticket — you're a neighbor.",
           },
           {
-            title: "Introductory pricing",
-            desc: "The most accessible prices in the region. We're starting out and want to earn your trust.",
+            title: "Proposal",
+            desc: "We work with businesses like yours to prove what you're worth.",
           },
           {
             title: "No jargon",
@@ -303,7 +320,7 @@ const resources = {
           },
           {
             title: "You're in control",
-            desc: "The systems are yours. You can run them without depending on us.",
+            desc: "The systems are yours. You can run and customize them to your needs.",
           },
         ],
       },
@@ -328,16 +345,36 @@ const resources = {
             a: "It's yours. You pay once for the setup and decide what to do with it. No locks, no surprises.",
           },
           {
-            q: "Why are your prices more accessible?",
-            a: "Because we're starting out and want to earn your trust. As we grow, prices will rise — but current clients keep their rate.",
+            q: "Do prices change over time?",
+            a: "No, current clients keep their rate. Always.",
+          },
+          {
+            q: "Do I need internet for the POS to work?",
+            a: "Yes, because your servers and infrastructure use online services.",
+          },
+          {
+            q: "Can I see my sales from my phone?",
+            a: "Yes you can. You only need a phone connected to the internet so sales never stop.",
           },
         ],
       },
       finalCta: {
-        title: "Let's talk!",
-        sub: "We listen first, then propose.",
+        title: "We have the answer.",
+        sub: "Tell us about your business and we'll build exactly what you need.",
         whatsapp: "Chat on WhatsApp",
         email: "Send email",
+      },
+      process: {
+        eyebrow: "How we work",
+        title: "From first message to working system.",
+        steps: [
+          "You message us",
+          "We schedule a chat",
+          "We present the proposal",
+          "We design and develop",
+          "We install",
+          "We train",
+        ],
       },
       footer: {
         tagline: "The link to a new path.",
@@ -350,7 +387,6 @@ const resources = {
       solutions: {
         title: "Our Solutions",
         sub: "Clear plans, honest pricing, fast delivery. Pick the one that fits your business.",
-        tabAll: "All",
         tabSite: "Nexvia Site",
         tabPos: "Nexvia POS",
         delivery: "Delivery",
@@ -367,7 +403,7 @@ const resources = {
         site: {
           basic: {
             name: "Basic",
-            tag: "For businesses that don't yet exist on Google",
+            tag: "For businesses that don't yet exist on Google.",
             features: [
               "Optimized 1-page site",
               "Responsive design",
@@ -379,7 +415,7 @@ const resources = {
           },
           comercial: {
             name: "Commercial",
-            tag: "For businesses that want to sell online",
+            tag: "For businesses that want to sell online. Your catalog open 24 hours.",
             features: [
               "Site with up to 5 sections",
               "Product catalog",
@@ -392,7 +428,7 @@ const resources = {
           },
           pro: {
             name: "Pro",
-            tag: "For mixed operations (physical + digital)",
+            tag: "Your physical and digital store, working together.",
             features: [
               "Fully custom website",
               "Online store with payments",
@@ -407,7 +443,7 @@ const resources = {
         pos: {
           esencial: {
             name: "Essential",
-            tag: "For grocery stores, shops, boutiques",
+            tag: "For shops, grocery stores and any kind of business. Charge faster, lose less time.",
             features: [
               "Fast sales and checkout",
               "Inventory control",
@@ -419,7 +455,7 @@ const resources = {
           },
           cocina: {
             name: "Kitchen",
-            tag: "For taquerías, eateries, restaurants",
+            tag: "Orders reach the kitchen on their own — you just serve.",
             features: [
               "Orders sent to kitchen",
               "Tables and split bills",
@@ -431,7 +467,7 @@ const resources = {
           },
           full: {
             name: "Full",
-            tag: "For large operations or multiple areas",
+            tag: "Control everything from one single place.",
             features: [
               "Multiple sales points",
               "Inventory by branch",

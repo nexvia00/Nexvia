@@ -1,7 +1,7 @@
 export const WHATSAPP_NUMBER = "5219995115178";
 export const EMAIL = "nexvia.00@gmail.com";
 export const FACEBOOK = "https://www.facebook.com/profile.php?id=61564734551037";
-export const INSTAGRAM = "https://www.instagram.com/";
+export const INSTAGRAM = "https://www.instagram.com/nexvia.00?igsh=MXNsMjd1d3dmOGE=";
 export const PHONE_DISPLAY = "999 511 5178";
 
 export const waLink = (planName?: string) => {

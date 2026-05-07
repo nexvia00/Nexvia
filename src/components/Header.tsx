@@ -90,7 +90,7 @@ export function Header() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed top-0 right-0 h-screen w-[80vw] max-w-sm bg-background border-l border-border md:hidden p-6 pt-20 flex flex-col gap-6"
+            className="fixed top-0 right-0 h-screen w-[80vw] max-w-sm bg-background border-l border-border md:hidden p-6 pt-20 pb-[60px] flex flex-col gap-6"
           >
             <button
               onClick={() => setOpen(false)}

@@ -10,7 +10,7 @@ export function FinalCta() {
     <section className="py-12">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-forest text-cream px-8 py-20 md:px-16 md:py-28 border border-border shadow-[0_30px_80px_-30px_var(--mint)]">
+          <div className="relative overflow-hidden rounded-3xl bg-[#437652] text-cream px-8 py-20 md:px-16 md:py-28 border border-[#74C69D] shadow-[0_20px_50px_-20px_#74C69D]">
             <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-mint/10 to-lime/30" />
             <img
               src={nLight}
@@ -25,7 +25,11 @@ export function FinalCta() {
                 <MagneticButton variant="primary" asLink={{ href: waLink(), external: true }}>
                   {t("finalCta.whatsapp")}
                 </MagneticButton>
-                <MagneticButton variant="ghost" asLink={{ href: mailLink }}>
+                <MagneticButton
+                  variant="ghost"
+                  asLink={{ href: mailLink }}
+                  className="hover:border-[#74C69D] hover:text-[#74C69D] hover:shadow-[0_0_30px_-10px_#74C69D]"
+                >
                   {t("finalCta.email")}
                 </MagneticButton>
               </div>

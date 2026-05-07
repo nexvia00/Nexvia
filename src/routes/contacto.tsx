@@ -2,13 +2,20 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { z } from "zod";
+import { zodValidator, fallback } from "@tanstack/zod-adapter";
 import { Check, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { EMAIL, PHONE_DISPLAY, waLink } from "@/lib/constants";
 
+const searchSchema = z.object({
+  plan: fallback(z.string().optional(), undefined),
+});
+
 export const Route = createFileRoute("/contacto")({
+  validateSearch: zodValidator(searchSchema),
   head: () => ({
     meta: [
       { title: "Contacto — NEXVIA · Hunucmá, Yucatán" },
@@ -29,13 +36,14 @@ export const Route = createFileRoute("/contacto")({
 
 function Contact() {
   const { t } = useTranslation();
+  const { plan: planParam } = Route.useSearch();
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
     whatsapp: "",
     business: "",
-    plan: "",
+    plan: planParam ?? "",
     message: "",
   });
 
@@ -57,7 +65,7 @@ function Contact() {
 
   return (
     <PageShell>
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 grain">
         <div className="container-x">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.2em] text-mint font-semibold">
@@ -136,12 +144,15 @@ function Contact() {
                     </label>
                     <select id="f-plan" value={form.plan} onChange={onChange("plan")} className={inputCls}>
                       <option value="">{t("contact.form.planNone")}</option>
-                      <option>Nexvia Site — Básico</option>
-                      <option>Nexvia Site — Comercial</option>
-                      <option>Nexvia Site — Pro</option>
-                      <option>Nexvia POS — Esencial</option>
-                      <option>Nexvia POS — Cocina</option>
-                      <option>Nexvia POS — Full</option>
+                      {planParam && !["Nexvia Site Básico","Nexvia Site Comercial","Nexvia Site Pro","Nexvia POS Esencial","Nexvia POS Cocina","Nexvia POS Full"].includes(planParam) && (
+                        <option value={planParam}>{planParam}</option>
+                      )}
+                      <option>Nexvia Site Básico</option>
+                      <option>Nexvia Site Comercial</option>
+                      <option>Nexvia Site Pro</option>
+                      <option>Nexvia POS Esencial</option>
+                      <option>Nexvia POS Cocina</option>
+                      <option>Nexvia POS Full</option>
                     </select>
                   </div>
 
