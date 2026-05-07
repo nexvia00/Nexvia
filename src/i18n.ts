@@ -106,10 +106,22 @@ const resources = {
         ],
       },
       finalCta: {
-        title: "¡Vamos a conversar!",
-        sub: "Te escuchamos primero, después proponemos.",
+        title: "Nosotros tenemos la respuesta.",
+        sub: "Cuéntame de tu negocio y nosotros creamos exactamente lo que necesitas.",
         whatsapp: "Hablar por WhatsApp",
         email: "Enviar correo",
+      },
+      process: {
+        eyebrow: "Cómo trabajamos",
+        title: "Del primer mensaje al sistema funcionando.",
+        steps: [
+          "Nos escribes",
+          "Agendamos una plática",
+          "Te presentamos la propuesta",
+          "Diseñamos y desarrollamos",
+          "Instalamos",
+          "Capacitamos",
+        ],
       },
       footer: {
         tagline: "El nexo hacia una nueva vía.",
