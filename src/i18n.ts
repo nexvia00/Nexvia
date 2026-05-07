@@ -443,7 +443,7 @@ const resources = {
         pos: {
           esencial: {
             name: "Essential",
-            tag: "For grocery stores, shops, boutiques",
+            tag: "For shops, grocery stores and any kind of business. Charge faster, lose less time.",
             features: [
               "Fast sales and checkout",
               "Inventory control",
