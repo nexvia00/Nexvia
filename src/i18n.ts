@@ -202,7 +202,7 @@ const resources = {
           },
           cocina: {
             name: "Cocina",
-            tag: "Para taquerías, cocinas económicas, restaurantes",
+            tag: "La comanda llega a cocina sola — tú solo atiende.",
             features: [
               "Comandas a cocina",
               "Mesas y cuentas separadas",
