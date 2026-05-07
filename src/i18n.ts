@@ -467,7 +467,7 @@ const resources = {
           },
           full: {
             name: "Full",
-            tag: "For large operations or multiple areas",
+            tag: "Control everything from one single place.",
             features: [
               "Multiple sales points",
               "Inventory by branch",
