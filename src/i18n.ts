@@ -387,7 +387,6 @@ const resources = {
       solutions: {
         title: "Our Solutions",
         sub: "Clear plans, honest pricing, fast delivery. Pick the one that fits your business.",
-        tabAll: "All",
         tabSite: "Nexvia Site",
         tabPos: "Nexvia POS",
         delivery: "Delivery",
