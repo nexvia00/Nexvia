@@ -162,7 +162,7 @@ const resources = {
           },
           comercial: {
             name: "Comercial",
-            tag: "Para negocios que quieren vender en línea",
+            tag: "Para negocios que quieren vender en línea. Tu catálogo abierto las 24 horas.",
             features: [
               "Sitio de hasta 5 secciones",
               "Catálogo de productos",
