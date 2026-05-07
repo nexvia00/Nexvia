@@ -428,7 +428,7 @@ const resources = {
           },
           pro: {
             name: "Pro",
-            tag: "For mixed operations (physical + digital)",
+            tag: "Your physical and digital store, working together.",
             features: [
               "Fully custom website",
               "Online store with payments",
