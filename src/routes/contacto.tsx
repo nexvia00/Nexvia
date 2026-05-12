@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { z } from "zod";
-import { zodValidator, fallback } from "@tanstack/zod-adapter";
+import { zodValidator } from "@tanstack/zod-adapter";
 import { Check, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Reveal } from "@/components/Reveal";
@@ -11,7 +11,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { EMAIL, PHONE_DISPLAY, waLink } from "@/lib/constants";
 
 const searchSchema = z.object({
-  plan: fallback(z.string().optional(), undefined),
+  plan: z.string().optional(),
 });
 
 export const Route = createFileRoute("/contacto")({

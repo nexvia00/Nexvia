@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { z } from "zod";
-import { zodValidator, fallback } from "@tanstack/zod-adapter";
+import { zodValidator } from "@tanstack/zod-adapter";
 import {
   Check,
   Clock,
@@ -21,7 +21,7 @@ import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const searchSchema = z.object({
-  plan: fallback(z.string().optional(), undefined),
+  plan: z.string().optional(),
 });
 
 export const Route = createFileRoute("/soluciones")({
