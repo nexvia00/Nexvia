@@ -21,7 +21,7 @@ import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 
 const searchSchema = z.object({
-  plan: fallback(z.string().optional(), undefined),
+  plan: z.string().optional(),
 });
 
 export const Route = createFileRoute("/soluciones")({
