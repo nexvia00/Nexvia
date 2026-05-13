@@ -106,7 +106,7 @@ function Solutions() {
   ];
   const posPlans: Plan[] = [
     { ...(t("solutions.pos.esencial", { returnObjects: true }) as Plan), key: "esencial" },
-    { ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan), key: "cocina", popular: true },
+    { ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan), key: "cocina" },
     { ...(t("solutions.pos.full", { returnObjects: true }) as Plan), key: "full" },
   ];
 
