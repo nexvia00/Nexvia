@@ -46,7 +46,16 @@ export function ProductsPreview() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-mint/0 via-mint/0 to-lime/0 group-hover:from-mint/20 group-hover:via-mint/10 group-hover:to-lime/30 transition-all duration-700" />
                   <div className="relative h-full p-8 md:p-10 flex flex-col">
-                    <Icon size={36} className="text-lime dark:text-mint" />
+                    <motion.div
+                      className="inline-block"
+                      variants={{
+                        rest: { rotate: 0, scale: 1 },
+                        hover: { rotate: 360, scale: [1, 1.2, 1] },
+                      }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon size={36} className="text-lime dark:text-mint" />
+                    </motion.div>
                     <div className="mt-auto">
                       <span className="text-xs tracking-widest uppercase text-cream/70">
                         {c.tag}
