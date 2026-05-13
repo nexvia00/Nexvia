@@ -117,7 +117,7 @@ const resources = {
         steps: [
           "Nos escribes",
           "Agendamos una plática",
-          "Te presentamos la propuesta",
+          "Presentamos la propuesta",
           "Diseñamos y desarrollamos",
           "Instalamos",
           "Capacitamos",
