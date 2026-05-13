@@ -83,7 +83,7 @@ function PlanCard({ plan, family }: { plan: Plan; family: string }) {
 
       <div className="mt-6">
         <MagneticButton
-          variant={plan.popular ? "primary" : "ghost"}
+          variant="ghost"
           asLink={{ href: `/contacto?plan=${encodeURIComponent(`${family} ${plan.name}`)}` }}
           className="w-full"
         >
