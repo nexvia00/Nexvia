@@ -101,7 +101,7 @@ function Solutions() {
 
   const sitePlans: Plan[] = [
     { ...(t("solutions.site.basic", { returnObjects: true }) as Plan), key: "basic" },
-    { ...(t("solutions.site.comercial", { returnObjects: true }) as Plan), key: "comercial", popular: true },
+    { ...(t("solutions.site.comercial", { returnObjects: true }) as Plan), key: "comercial" },
     { ...(t("solutions.site.pro", { returnObjects: true }) as Plan), key: "pro" },
   ];
   const posPlans: Plan[] = [
