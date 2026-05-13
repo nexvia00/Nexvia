@@ -61,9 +61,7 @@ function PlanCard({ plan, family }: { plan: Plan; family: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`relative rounded-3xl border ${
-        plan.popular ? "border-lime shadow-[0_0_40px_-15px_var(--lime)]" : "border-border"
-      } bg-card p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-[#74C69D] hover:shadow-[0_20px_50px_-20px_#74C69D]`}
+      className="relative rounded-3xl border border-border bg-card p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-[#74C69D] hover:shadow-[0_20px_50px_-20px_#74C69D]"
     >
       <span className="text-xs uppercase tracking-[0.2em] text-mint font-semibold">{family}</span>
       <h3 className="mt-3 text-3xl font-display font-bold">{plan.name}</h3>
