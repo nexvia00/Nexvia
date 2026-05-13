@@ -14,7 +14,7 @@ export function WhyExist() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mt-6 max-w-4xl font-display text-lg md:text-xl leading-tight tracking-tight">
+          <p className="mt-6 max-w-4xl font-display text-[32px] leading-tight tracking-tight">
             {t("why.statement")}
           </p>
         </Reveal>
