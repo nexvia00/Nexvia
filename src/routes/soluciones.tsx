@@ -221,12 +221,12 @@ function Solutions() {
               const Icon = s.icon;
               return (
                 <Reveal key={s.num} delay={i * 0.07}>
-                  <div className="relative overflow-hidden rounded-2xl border border-border bg-card/50 p-6 h-full flex flex-col items-center text-center transition-all duration-300 hover:border-[#74C69D] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-20px_#74C69D]">
+                  <div className="relative flex flex-col items-center text-center gap-3 rounded-2xl border border-border bg-card/50 p-6 pt-16 hover:border-mint hover:-translate-y-1 transition-all duration-300 h-full">
+                    <Icon size={28} className="absolute top-4 left-4 text-lime" />
                     <span className="absolute top-2 right-3 text-5xl font-display font-bold text-[#74C69D]/20 select-none">
                       {s.num}
                     </span>
-                    <Icon size={28} className="text-lime relative z-10" />
-                    <span className="mt-4 font-display font-semibold text-sm relative z-10">
+                    <span className="font-display font-semibold text-sm">
                       {s.label}
                     </span>
                   </div>
