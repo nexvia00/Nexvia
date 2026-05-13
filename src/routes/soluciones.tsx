@@ -61,9 +61,7 @@ function PlanCard({ plan, family }: { plan: Plan; family: string }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`relative rounded-3xl border ${
-        plan.popular ? "border-lime shadow-[0_0_40px_-15px_var(--lime)]" : "border-border"
-      } bg-card p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-[#74C69D] hover:shadow-[0_20px_50px_-20px_#74C69D]`}
+      className="relative rounded-3xl border border-border bg-card p-8 flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-[#74C69D] hover:shadow-[0_20px_50px_-20px_#74C69D]"
     >
       <span className="text-xs uppercase tracking-[0.2em] text-mint font-semibold">{family}</span>
       <h3 className="mt-3 text-3xl font-display font-bold">{plan.name}</h3>
@@ -85,7 +83,7 @@ function PlanCard({ plan, family }: { plan: Plan; family: string }) {
 
       <div className="mt-6">
         <MagneticButton
-          variant={plan.popular ? "primary" : "ghost"}
+          variant="ghost"
           asLink={{ href: `/contacto?plan=${encodeURIComponent(`${family} ${plan.name}`)}` }}
           className="w-full"
         >
@@ -103,12 +101,12 @@ function Solutions() {
 
   const sitePlans: Plan[] = [
     { ...(t("solutions.site.basic", { returnObjects: true }) as Plan), key: "basic" },
-    { ...(t("solutions.site.comercial", { returnObjects: true }) as Plan), key: "comercial", popular: true },
+    { ...(t("solutions.site.comercial", { returnObjects: true }) as Plan), key: "comercial" },
     { ...(t("solutions.site.pro", { returnObjects: true }) as Plan), key: "pro" },
   ];
   const posPlans: Plan[] = [
     { ...(t("solutions.pos.esencial", { returnObjects: true }) as Plan), key: "esencial" },
-    { ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan), key: "cocina", popular: true },
+    { ...(t("solutions.pos.cocina", { returnObjects: true }) as Plan), key: "cocina" },
     { ...(t("solutions.pos.full", { returnObjects: true }) as Plan), key: "full" },
   ];
 
@@ -223,12 +221,12 @@ function Solutions() {
               const Icon = s.icon;
               return (
                 <Reveal key={s.num} delay={i * 0.07}>
-                  <div className="relative overflow-hidden rounded-2xl border border-border bg-card/50 p-6 h-full flex flex-col items-center text-center transition-all duration-300 hover:border-[#74C69D] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-20px_#74C69D]">
+                  <div className="relative flex flex-col items-center text-center gap-3 rounded-2xl border border-border bg-card/50 p-6 pt-16 hover:border-mint hover:-translate-y-1 transition-all duration-300 h-full">
+                    <Icon size={28} className="absolute top-4 left-4 text-lime" />
                     <span className="absolute top-2 right-3 text-5xl font-display font-bold text-[#74C69D]/20 select-none">
                       {s.num}
                     </span>
-                    <Icon size={28} className="text-lime relative z-10" />
-                    <span className="mt-4 font-display font-semibold text-sm relative z-10">
+                    <span className="font-display font-semibold text-sm">
                       {s.label}
                     </span>
                   </div>

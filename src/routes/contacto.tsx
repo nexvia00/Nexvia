@@ -186,7 +186,7 @@ function Contact() {
 
               <div className="mt-8 space-y-5 text-cream/90">
                 <a href={waLink()} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
-                  <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-lime text-deep shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream shrink-0 group-hover:scale-110 transition-transform">
                     <MessageCircle size={18} />
                   </span>
                   <div>
@@ -196,7 +196,7 @@ function Contact() {
                 </a>
 
                 <a href={`mailto:${EMAIL}`} className="flex items-start gap-4 group">
-                  <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-mint text-deep shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 text-cream shrink-0 group-hover:scale-110 transition-transform">
                     <Mail size={18} />
                   </span>
                   <div>

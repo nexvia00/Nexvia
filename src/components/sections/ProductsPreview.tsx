@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Globe, Store } from "lucide-react";
+import { motion } from "framer-motion";
 import { Reveal } from "../Reveal";
 
 export function ProductsPreview() {
@@ -44,8 +45,17 @@ export function ProductsPreview() {
                   className="group relative block h-[400px] sm:h-[300px] md:h-[400px] rounded-3xl overflow-hidden bg-forest text-cream border border-border hover:border-mint transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_80px_-30px_var(--mint)]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-mint/0 via-mint/0 to-lime/0 group-hover:from-mint/20 group-hover:via-mint/10 group-hover:to-lime/30 transition-all duration-700" />
-                  <div className="relative h-full p-8 md:p-10 flex flex-col">
-                    <Icon size={36} className="text-lime dark:text-mint" />
+                  <motion.div initial="rest" whileHover="hover" animate="rest" className="relative h-full p-8 md:p-10 flex flex-col">
+                    <motion.div
+                      className="inline-block"
+                      variants={{
+                        rest: { rotate: 0, scale: 1 },
+                        hover: { rotate: 360, scale: [1, 1.2, 1] },
+                      }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon size={36} className="text-lime dark:text-mint" />
+                    </motion.div>
                     <div className="mt-auto">
                       <span className="text-xs tracking-widest uppercase text-cream/70">
                         {c.tag}
@@ -57,7 +67,7 @@ export function ProductsPreview() {
                         <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </Link>
               </Reveal>
             );
