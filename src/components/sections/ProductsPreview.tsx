@@ -67,7 +67,7 @@ export function ProductsPreview() {
                         <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </Link>
               </Reveal>
             );
