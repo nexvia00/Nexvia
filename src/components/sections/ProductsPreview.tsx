@@ -45,7 +45,7 @@ export function ProductsPreview() {
                   className="group relative block h-[400px] sm:h-[300px] md:h-[400px] rounded-3xl overflow-hidden bg-forest text-cream border border-border hover:border-mint transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_30px_80px_-30px_var(--mint)]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-mint/0 via-mint/0 to-lime/0 group-hover:from-mint/20 group-hover:via-mint/10 group-hover:to-lime/30 transition-all duration-700" />
-                  <div className="relative h-full p-8 md:p-10 flex flex-col">
+                  <motion.div initial="rest" whileHover="hover" animate="rest" className="relative h-full p-8 md:p-10 flex flex-col">
                     <motion.div
                       className="inline-block"
                       variants={{
