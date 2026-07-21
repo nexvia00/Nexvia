@@ -41,13 +41,18 @@ const resources = {
           name: "Nexvia Site",
           tagline: "Presencia Digital y Ventas en Línea",
           desc: "Sitios web rápidos y modernos que convierten visitas en clientes — sin tecnicismos.",
+          slogan: "Presencia digital que funciona desde el primer día.",
+          from: "desde $1,475 MXN",
+          placeholder: "Tu sitio web, listo en días",
         },
         pos: {
           name: "Nexvia POS",
           tagline: "Punto de Venta para Cocinas y Tiendas",
           desc: "Sistemas de venta hechos para la realidad del negocio. Fáciles de usar.",
+          slogan: "El sistema se adapta a tu negocio — no al revés.",
+          from: "desde $1,200 MXN",
         },
-        seePlans: "Ver planes",
+        cta: "Ver planes y precios",
       },
       diff: {
         eyebrow: "Por qué Nexvia",
@@ -103,6 +108,18 @@ const resources = {
             q: "¿Puedo ver mis ventas desde el celular?",
             a: "Sí puedes. Solo hace falta un teléfono conectado a internet para que las ventas nunca paren.",
           },
+          {
+            q: "¿Cómo se cobra NEXVIA POS?",
+            a: "El pago es anual. Incluye el sistema completo, actualizaciones y soporte. Sin mensualidades sorpresa.",
+          },
+          {
+            q: "¿Puedo personalizar el sistema para mi negocio?",
+            a: "Sí. Cada instalación de NEXVIA se configura específicamente para tu negocio. Si necesitas algo que no está en el plan estándar, lo conversamos.",
+          },
+          {
+            q: "¿El pago es mensual o anual?",
+            a: "El pago es anual. Incluye sistema completo, actualizaciones y soporte local. Sin mensualidades sorpresa.",
+          },
         ],
       },
       finalCta: {
@@ -139,6 +156,39 @@ const resources = {
         delivery: "Entrega",
         days: "días",
         quote: "Cotizar",
+        from: "desde",
+        perMonth: "/mes",
+        monthlyLabel: "de renta",
+        mostPopular: "Más popular",
+        wantPlan: "Quiero este plan",
+        valueLine: "El sistema se adapta a tu negocio — no al revés. Cada instalación es personalizada.",
+        subnav: {
+          site: "Nexvia Site",
+          tienda: "POS Tienda",
+          cocina: "POS Cocina",
+        },
+        showcase: {
+          site: {
+            headline: "Tu negocio en línea, listo para vender",
+            sub: "Un sitio web profesional que tus clientes encuentran, entienden y desde donde te contactan.",
+          },
+          tienda: {
+            headline: "Tu caja, tu catálogo, tu control",
+            sub: "Vende más rápido, conoce tu inventario en tiempo real y cierra el día con números claros.",
+            pills: ["Hasta 500 productos", "Cobro en efectivo, tarjeta o mixto", "Corte de caja automático"],
+          },
+          cocina: {
+            headline: "De la comanda a la mesa, sin papel y sin errores",
+            sub: "Tu cocina recibe los pedidos en pantalla al instante. Sin gritos, sin pérdidas, sin confusiones.",
+            pills: ["Comandas digitales en tiempo real", "KDS para cocina", "Reportes por turno"],
+            note: "POS Cocina incluye todo lo de POS Esencial + módulo de cocina",
+          },
+        },
+        posValue: {
+          title: "Hecho para tu negocio, no para todos los negocios",
+          body: "NEXVIA POS no es un sistema genérico. Cada instalación se configura a las necesidades específicas de tu negocio — tus productos, tus procesos, tu forma de trabajar. Si algo no encaja, lo adaptamos.",
+          pills: ["Personalizable", "Sin límites de productos", "Soporte local"],
+        },
         included: "Incluido en todos los paquetes",
         inclusions: [
           "Capacitación al equipo",
@@ -150,6 +200,8 @@ const resources = {
         site: {
           basic: {
             name: "Básico",
+            price: "$1,475 MXN",
+            monthly: "$200",
             tag: "Para negocios que hoy no existen en Google.",
             features: [
               "Sitio de 1 página optimizado",
@@ -162,6 +214,8 @@ const resources = {
           },
           comercial: {
             name: "Comercial",
+            price: "$2,750 MXN",
+            monthly: "$500",
             tag: "Para negocios que quieren vender en línea. Tu catálogo abierto las 24 horas.",
             features: [
               "Sitio de hasta 5 secciones",
@@ -175,6 +229,8 @@ const resources = {
           },
           pro: {
             name: "Pro",
+            price: "$4,750 MXN",
+            monthly: "$700",
             tag: "Tu tienda física y digital, trabajando juntas.",
             features: [
               "Sitio completo personalizado",
@@ -190,6 +246,8 @@ const resources = {
         pos: {
           esencial: {
             name: "Esencial",
+            price: "$1,200 MXN",
+            monthly: "$300",
             tag: "Para tiendas, abarrotes y cualquier tipo de negocio. Cobra más rápido, pierde menos tiempo.",
             features: [
               "Ventas y cobro rápido",
@@ -202,6 +260,8 @@ const resources = {
           },
           cocina: {
             name: "Cocina",
+            price: "$2,275 MXN",
+            monthly: "$600",
             tag: "La comanda llega a cocina sola — tú solo atiende.",
             features: [
               "Comandas a cocina",
@@ -214,6 +274,8 @@ const resources = {
           },
           full: {
             name: "Full",
+            price: "$3,128 MXN",
+            monthly: "$900",
             tag: "Controla todo desde un solo lugar.",
             features: [
               "Múltiples puntos de venta",
@@ -294,13 +356,18 @@ const resources = {
           name: "Nexvia Site",
           tagline: "Digital Presence and Online Sales",
           desc: "Fast, modern websites that turn visitors into customers — no jargon.",
+          slogan: "A digital presence that works from day one.",
+          from: "from $1,475 MXN",
+          placeholder: "Your website, ready in days",
         },
         pos: {
           name: "Nexvia POS",
           tagline: "Point of Sale for Kitchens and Stores",
           desc: "Sales systems built for the reality of local businesses. Easy to use.",
+          slogan: "The system adapts to your business — not the other way around.",
+          from: "from $1,200 MXN",
         },
-        seePlans: "See plans",
+        cta: "See plans & pricing",
       },
       diff: {
         eyebrow: "Why Nexvia",
@@ -356,6 +423,18 @@ const resources = {
             q: "Can I see my sales from my phone?",
             a: "Yes you can. You only need a phone connected to the internet so sales never stop.",
           },
+          {
+            q: "How is NEXVIA POS billed?",
+            a: "Payment is annual. It includes the full system, updates and support. No surprise monthly fees.",
+          },
+          {
+            q: "Can I customize the system for my business?",
+            a: "Yes. Every NEXVIA installation is configured specifically for your business. If you need something outside the standard plan, we'll talk it through.",
+          },
+          {
+            q: "Is payment monthly or annual?",
+            a: "Payment is annual. It includes the full system, updates and local support. No surprise monthly fees.",
+          },
         ],
       },
       finalCta: {
@@ -392,6 +471,39 @@ const resources = {
         delivery: "Delivery",
         days: "days",
         quote: "Get a quote",
+        from: "from",
+        perMonth: "/mo",
+        monthlyLabel: "rent",
+        mostPopular: "Most popular",
+        wantPlan: "I want this plan",
+        valueLine: "The system adapts to your business — not the other way around. Every installation is personalized.",
+        subnav: {
+          site: "Nexvia Site",
+          tienda: "POS Store",
+          cocina: "POS Kitchen",
+        },
+        showcase: {
+          site: {
+            headline: "Your business online, ready to sell",
+            sub: "A professional website your customers find, understand, and reach you from.",
+          },
+          tienda: {
+            headline: "Your register, your catalog, your control",
+            sub: "Sell faster, know your inventory in real time and close the day with clear numbers.",
+            pills: ["Up to 500 products", "Cash, card or mixed payment", "Automatic cash close"],
+          },
+          cocina: {
+            headline: "From order to table, no paper and no mistakes",
+            sub: "Your kitchen receives orders on screen instantly. No shouting, no losses, no confusion.",
+            pills: ["Real-time digital orders", "KDS for the kitchen", "Reports by shift"],
+            note: "POS Kitchen includes everything in POS Essential + kitchen module",
+          },
+        },
+        posValue: {
+          title: "Built for your business, not for every business",
+          body: "NEXVIA POS is not a generic system. Every installation is configured to your business's specific needs — your products, your processes, your way of working. If something doesn't fit, we adapt it.",
+          pills: ["Customizable", "No product limits", "Local support"],
+        },
         included: "Included in every plan",
         inclusions: [
           "Team training",
@@ -403,6 +515,8 @@ const resources = {
         site: {
           basic: {
             name: "Basic",
+            price: "$1,475 MXN",
+            monthly: "$200",
             tag: "For businesses that don't yet exist on Google.",
             features: [
               "Optimized 1-page site",
@@ -415,6 +529,8 @@ const resources = {
           },
           comercial: {
             name: "Commercial",
+            price: "$2,750 MXN",
+            monthly: "$500",
             tag: "For businesses that want to sell online. Your catalog open 24 hours.",
             features: [
               "Site with up to 5 sections",
@@ -428,6 +544,8 @@ const resources = {
           },
           pro: {
             name: "Pro",
+            price: "$4,750 MXN",
+            monthly: "$700",
             tag: "Your physical and digital store, working together.",
             features: [
               "Fully custom website",
@@ -443,6 +561,8 @@ const resources = {
         pos: {
           esencial: {
             name: "Essential",
+            price: "$1,200 MXN",
+            monthly: "$300",
             tag: "For shops, grocery stores and any kind of business. Charge faster, lose less time.",
             features: [
               "Fast sales and checkout",
@@ -455,6 +575,8 @@ const resources = {
           },
           cocina: {
             name: "Kitchen",
+            price: "$2,275 MXN",
+            monthly: "$600",
             tag: "Orders reach the kitchen on their own — you just serve.",
             features: [
               "Orders sent to kitchen",
@@ -467,6 +589,8 @@ const resources = {
           },
           full: {
             name: "Full",
+            price: "$3,128 MXN",
+            monthly: "$900",
             tag: "Control everything from one single place.",
             features: [
               "Multiple sales points",

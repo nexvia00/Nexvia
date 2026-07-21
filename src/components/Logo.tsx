@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import logoDark from "@/assets/nexvia-letras-dark.svg";
-import logoLight from "@/assets/nexvia-letras-light.svg";
+// Wordmark banners cropped from the full square brand files
+// ("logo nexvia green light.png" / "logo nexvia light green.png").
+import wordmarkDarkBg from "@/assets/logos/wordmark-dark-bg.png";
+import wordmarkLightBg from "@/assets/logos/wordmark-light-bg.png";
 
 export function Logo({ className = "" }: { className?: string }) {
   const [isDark, setIsDark] = useState(false);
@@ -16,11 +18,11 @@ export function Logo({ className = "" }: { className?: string }) {
 
   return (
     <img
-      src={isDark ? logoDark : logoLight}
+      src={isDark ? wordmarkDarkBg : wordmarkLightBg}
       alt="NEXVIA"
-      width={840}
-      height={102}
-      className={`h-2.5 md:h-3.5 w-auto select-none object-contain ${className}`}
+      width={1860}
+      height={380}
+      className={`h-4 md:h-5 w-auto select-none object-contain ${className}`}
       draggable={false}
     />
   );

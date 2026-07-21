@@ -1,17 +1,23 @@
 import { useTranslation } from "react-i18next";
-import { Reveal } from "../Reveal";
+import { motion, useReducedMotion } from "framer-motion";
 import { MagneticButton } from "../MagneticButton";
 import { waLink, mailLink } from "@/lib/constants";
 import nLight from "@/assets/nexvia-n-light.png";
 
 export function FinalCta() {
   const { t } = useTranslation();
+  const reduce = useReducedMotion();
   return (
     <section className="py-12">
       <div className="container-x">
-        <Reveal>
+        <motion.div
+          initial={reduce ? false : { opacity: 0, scale: 0.94 }}
+          whileInView={reduce ? undefined : { opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="relative overflow-hidden rounded-3xl bg-[#437652] text-cream px-8 py-20 md:px-16 md:py-28 border border-[#74C69D] shadow-[0_20px_50px_-20px_#74C69D]">
-            <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-mint/10 to-lime/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-mint/20 via-mint/10 to-mint/30" />
             <img
               src={nLight}
               alt=""
@@ -35,7 +41,7 @@ export function FinalCta() {
               </div>
             </div>
           </div>
-        </Reveal>
+        </motion.div>
       </div>
     </section>
   );

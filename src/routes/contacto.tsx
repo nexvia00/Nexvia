@@ -98,7 +98,7 @@ function Contact() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                    className="h-16 w-16 rounded-full bg-lime text-deep flex items-center justify-center"
+                    className="h-16 w-16 rounded-full bg-mint text-deep flex items-center justify-center"
                   >
                     <Check size={32} strokeWidth={3} />
                   </motion.div>

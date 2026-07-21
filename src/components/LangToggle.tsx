@@ -12,9 +12,9 @@ export function LangToggle() {
       aria-label={t("common.toggleLang")}
       className="inline-flex items-center gap-1 h-10 rounded-full border border-border px-3 text-xs font-semibold tracking-wider bg-background/40 backdrop-blur hover:border-mint transition-colors"
     >
-      <span className={current === "es" ? "text-lime" : "opacity-50"}>ES</span>
+      <span className={current === "es" ? "text-mint" : "opacity-50"}>ES</span>
       <span className="opacity-30">/</span>
-      <span className={current === "en" ? "text-lime" : "opacity-50"}>EN</span>
+      <span className={current === "en" ? "text-mint" : "opacity-50"}>EN</span>
     </button>
   );
 }

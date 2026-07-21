@@ -30,3 +30,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code local settings
+.claude/
+
+# Loose working images in project root (originals live in src/assets/)
+/*.png

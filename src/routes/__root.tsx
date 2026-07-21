@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import { AnimatePresence } from "framer-motion";
 
 import appCss from "../styles.css?url";
+import faviconPng from "@/assets/logos/logo nexvia green light iso.png";
 import { AppProviders } from "@/components/providers/AppProviders";
 
 function NotFoundComponent() {
@@ -51,12 +52,7 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "icon",
-        type: "image/svg+xml",
-        href:
-          "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B2E22'/><circle cx='16' cy='16' r='6' fill='%23B7FF6E'/></svg>",
-      },
+      { rel: "icon", type: "image/png", href: faviconPng },
     ],
   }),
   shellComponent: RootShell,

@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
+import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "../Reveal";
 
 export function WhyExist() {
   const { t } = useTranslation();
   const pills = t("why.pills", { returnObjects: true }) as string[];
+  const reduce = useReducedMotion();
 
   return (
     <section className="py-24 md:py-32">
@@ -18,18 +20,20 @@ export function WhyExist() {
             {t("why.statement")}
           </p>
         </Reveal>
-        <Reveal delay={0.2}>
-          <ul className="mt-12 flex flex-wrap gap-3">
-            {pills.map((p) => (
-              <li
-                key={p}
-                className="rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:-translate-y-1 hover:border-mint hover:text-mint transition-all duration-300"
-              >
-                {p}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        <ul className="mt-12 flex flex-wrap gap-3">
+          {pills.map((p, i) => (
+            <motion.li
+              key={p}
+              initial={reduce ? false : { opacity: 0, y: 24 }}
+              whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 + i * 0.1 }}
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium hover:-translate-y-1 hover:border-mint hover:text-mint transition-all duration-300"
+            >
+              {p}
+            </motion.li>
+          ))}
+        </ul>
       </div>
     </section>
   );

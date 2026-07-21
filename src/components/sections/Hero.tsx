@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { MagneticButton } from "../MagneticButton";
 import { waLink } from "@/lib/constants";
 import { Link } from "@tanstack/react-router";
-import nLight from "@/assets/nexvia-n-light.png";
+import posHero from "@/assets/pos-screenshots/pos-hero.png";
 
 function GradientMesh() {
   const reduce = useReducedMotion();
@@ -33,7 +33,7 @@ function GradientMesh() {
       <div
         className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle at ${x1}% ${y1}%, var(--mint) 0%, transparent 40%), radial-gradient(circle at ${x2}% ${y2}%, var(--lime) 0%, transparent 35%)`,
+          background: `radial-gradient(circle at ${x1}% ${y1}%, var(--mint) 0%, transparent 40%), radial-gradient(circle at ${x2}% ${y2}%, var(--forest) 0%, transparent 35%)`,
           opacity: 0.35,
           filter: "blur(80px)",
         }}
@@ -62,49 +62,63 @@ export function Hero() {
         <GradientMesh />
       </motion.div>
 
-      <img
-        src={nLight}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute right-[2%] bottom-[5%] w-[45vw] max-w-[600px] object-contain opacity-[0.05] select-none z-0"
-      />
+      <div className="container-x relative z-10 py-28 md:py-32 grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div>
+          <h1 className="max-w-5xl">
+            {words.map((w, i) => (
+              <motion.span
+                key={`${w}-${i}`}
+                initial={reduce ? false : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-block mr-[0.25em]"
+              >
+                {w}
+              </motion.span>
+            ))}
+          </h1>
 
-      <div className="container-x relative z-10 py-32">
-        <h1 className="max-w-5xl">
-          {words.map((w, i) => (
-            <motion.span
-              key={`${w}-${i}`}
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block mr-[0.25em]"
-            >
-              {w}
-            </motion.span>
-          ))}
-        </h1>
+          <motion.p
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: words.length * 0.06 + 0.1 }}
+            className="mt-6 max-w-[60ch] text-lg text-muted-foreground"
+          >
+            {t("hero.sub")}
+          </motion.p>
 
-        <motion.p
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: words.length * 0.06 + 0.1 }}
-          className="mt-6 max-w-[60ch] text-lg text-muted-foreground"
-        >
-          {t("hero.sub")}
-        </motion.p>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: words.length * 0.06 + 0.25 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <Link to="/soluciones">
+              <MagneticButton variant="primary">{t("hero.ctaPrimary")}</MagneticButton>
+            </Link>
+            <MagneticButton variant="ghost" asLink={{ href: waLink(), external: true }}>
+              {t("hero.ctaSecondary")}
+            </MagneticButton>
+          </motion.div>
+        </div>
 
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 12 }}
+          initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: words.length * 0.06 + 0.25 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          transition={{ duration: 0.9, delay: words.length * 0.06 + 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="relative"
         >
-          <Link to="/soluciones">
-            <MagneticButton variant="primary">{t("hero.ctaPrimary")}</MagneticButton>
-          </Link>
-          <MagneticButton variant="ghost" asLink={{ href: waLink(), external: true }}>
-            {t("hero.ctaSecondary")}
-          </MagneticButton>
+          <div className="-rotate-2 rounded-2xl bg-deep/90 border border-cream/10 p-2 md:p-3 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)]">
+            <img
+              src={posHero}
+              alt="Nexvia POS — catálogo de productos"
+              width={1600}
+              height={885}
+              loading="eager"
+              className="rounded-xl w-full h-auto select-none"
+              draggable={false}
+            />
+          </div>
         </motion.div>
       </div>
 

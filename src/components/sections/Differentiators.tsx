@@ -23,10 +23,10 @@ export function Differentiators() {
           {items.map((it, i) => {
             const Icon = icons[i];
             return (
-              <Reveal key={it.title} delay={i * 0.08}>
+              <Reveal key={it.title} delay={i * 0.1}>
                 <div className="group relative h-full rounded-2xl border border-border bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-mint hover:shadow-[0_20px_50px_-20px_var(--mint)]">
                   <div className="flex items-start justify-between">
-                    <Icon size={28} className="text-lime dark:text-mint" />
+                    <Icon size={28} className="text-mint" />
                   </div>
                   <h3 className="mt-8 text-2xl font-display font-semibold">{it.title}</h3>
                   <p className="mt-3 text-muted-foreground">{it.desc}</p>
